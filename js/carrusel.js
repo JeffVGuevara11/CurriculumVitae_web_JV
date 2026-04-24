@@ -15,3 +15,17 @@ function moverCarruselENLA(direccion) {
     indiceENLA = (indiceENLA + direccion + totalCards) % totalCards;
     contenedor.style.transform = `translateX(-${indiceENLA * 800}px)`;
 }
+
+let indexIncidencias = 0;
+
+function moverCarruselIncidencias(direccion) {
+    const container = document.getElementById("projects-container-incidencias");
+    const total = container.children.length;
+
+    indexIncidencias += direccion;
+
+    if (indexIncidencias < 0) indexIncidencias = total - 1;
+    if (indexIncidencias >= total) indexIncidencias = 0;
+
+    container.style.transform = `translateX(-${indexIncidencias * 800}px)`;
+}
