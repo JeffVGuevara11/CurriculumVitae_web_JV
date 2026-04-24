@@ -459,7 +459,6 @@ footer {
 
 /* ===== SOLO CARRUSEL ENLA ===== */
 
-
 #proyectos-enla {
     margin-top: 100px;
 }
@@ -467,9 +466,18 @@ footer {
 #proyectos-enla .carrusel {
     width: 800px;
     height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#proyectos-enla .projects-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 #proyectos-enla .project-card {
+    min-width: 800px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -479,7 +487,54 @@ footer {
     overflow: hidden;
 }
 
+/* 🔥 CONTENEDOR DE IMAGEN */
+#proyectos-enla .project-img {
+    height: 320px; /* puedes ajustar 300 - 400 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111; /* opcional, mejora visual */
+}
+
+/* 🔥 IMAGEN CORREGIDA */
 #proyectos-enla .project-img img {
-    height: 300px;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 👈 clave: NO recorta */
+}
+
+/* TEXTO */
+#proyectos-enla .project-info {
+    padding: 1.5rem;
+}
+
+#proyectos-enla .project-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+#proyectos-enla .project-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* BOTONES */
+#proyectos-enla .boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#proyectos-enla .anterior {
+    left: 10px;
+}
+
+#proyectos-enla .siguiente {
+    right: 10px;
 }
