@@ -538,3 +538,31 @@ footer {
 #proyectos-enla .siguiente {
     right: 10px;
 }
+
+.btn-web-pro {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #24292e; /* base tipo GitHub */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border: 1px solid #444;
+}
+
+.btn-web-pro i {
+    font-size: 0.9rem;
+}
+
+.btn-web-pro:hover {
+    background-color: #2f363d;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.btn-web-pro:active {
+    transform: scale(0.96);
+}
