@@ -459,16 +459,16 @@ footer {
 
 /* ===== SOLO CARRUSEL ENLA ===== */
 
-#proyectos-enla {
+.proyectos-enla {
     margin-top: 100px;
 }
 
-#proyectos-enla .carrusel {
+.proyectos-enla .carrusel {
     width: 800px;
     height: 500px;
 }
 
-#proyectos-enla .project-card {
+.proyectos-enla .project-card {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -478,7 +478,7 @@ footer {
     overflow: hidden;
 }
 
-#proyectos-enla .project-img img {
+.proyectos-enla .project-img img {
     height: 300px;
     object-fit: cover;
 }
