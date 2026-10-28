@@ -186,7 +186,7 @@ section { padding: 6rem 5%; max-width: 1400px; margin: 0 auto; }
     top: 0; 
     left: 20px;
     width: 2px; 
-    height: 82.8%; 
+    bottom: 0; 
     background-color: var(--border-color);
 }
 
