@@ -1,54 +1,13 @@
-.carrusel {
-    width: 800px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.projects-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.project-card {
-    min-width: 800px;
-    box-sizing: border-box;
-}
-
-.project-img img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-}
-
-.boton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.anterior {
-    left: 10px;
-}
-
-.siguiente {
-    right: 10px;
-}
-
+/* =========================================
+   1. VARIABLES Y RESETEO
+   ========================================= */
 :root { 
     --primary-color: #6c63ff;
     --dark-bg: #121212;
-    --darker-bg:#0a0a0a;
-    --ligth-text:#f5f5f5;
-    --gray-text:#aaaaaa;
-    --card-bg:#1e1e1e1e;
+    --darker-bg: #0a0a0a;
+    --ligth-text: #f5f5f5;
+    --gray-text: #aaaaaa;
+    --card-bg: #1e1e1e;
     --border-color: #2d2d2d;
     --transition: all .3s ease;
 }
@@ -65,7 +24,7 @@ html {
 }
 
 body {
-    font-family: 'Segeo UI, Tahoma, Geneva, Verdana, sans-serif';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark-bg);
     color: var(--ligth-text);
     line-height: 1.6;
@@ -86,6 +45,9 @@ img {
     display: block;
 }
 
+/* =========================================
+   2. BARRA DE NAVEGACIÓN Y ENCABEZADO
+   ========================================= */
 header {
     position: fixed;
     top: 0;
@@ -112,7 +74,7 @@ header {
     letter-spacing: 1px;
 }
 
-.logo span{
+.logo span {
     color: var(--primary-color);
 }
 
@@ -146,6 +108,9 @@ header {
     width: 100%;
 }
 
+/* =========================================
+   3. SECCIONES GENERALES Y BOTONES
+   ========================================= */
 section {
     padding: 6rem 5%;
     max-width: 1400px;
@@ -182,13 +147,16 @@ section {
     border: none;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #5651d8;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3)
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
 }
 
-.hero{
+/* =========================================
+   4. HERO (INICIO)
+   ========================================= */
+.hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -219,7 +187,7 @@ section {
     font-weight: 600;
 }
 
-.hero-text p{
+.hero-text p {
     margin-bottom: 1.5rem;
     color: var(--gray-text);
     font-size: 1.1rem;
@@ -271,6 +239,9 @@ section {
     box-shadow: 0 0 30px rgba(108, 99, 255, .5);   
 }
 
+/* =========================================
+   5. LÍNEA DE TIEMPO (EXPERIENCIA)
+   ========================================= */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -293,7 +264,7 @@ section {
     padding-left: 50px;
 }
 
-.timeline-item:before{
+.timeline-item:before {
     content: '';
     position: absolute;
     top: 5px;
@@ -314,10 +285,14 @@ section {
 
 .timeline-content {
     flex: 2;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--primary-color);
 }
 
 .timeline-img {
-    flex: 1; /* La imagen ocupa menos espacio */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,15 +301,8 @@ section {
 .timeline-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen se ajusta al contenedor */
-    border-radius: 10px; /* Opcional: bordes redondeados */
-}
-
-.timeline-content { 
-    background-color: var(--card-bg);
-    padding: 1.5rem;
+    object-fit: cover;
     border-radius: 10px;
-    border-left: 3px solid var(--primary-color)
 }
 
 .date {
@@ -359,7 +327,6 @@ section {
     font-weight: 500;
 }
 
-
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -367,23 +334,47 @@ section {
     margin-top: .8rem;
 }
 
-.skills li{
+.skills li {
     font-size: .8rem;
     padding: .3rem .8rem;
     background-color: var(--darker-bg);
     border-radius: 20px;
 }
 
-.project-img{
+/* =========================================
+   6. CARRUSELES Y PROYECTOS (GENERAL)
+   ========================================= */
+.carrusel {
+    width: 800px;
+    margin: auto;
+    position: relative;
     overflow: hidden;
 }
 
-.project-img img{
+.projects-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+    min-width: 800px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    overflow: hidden;
+    background-color: var(--darker-bg);
+}
+
+/* Transición suave de zoom para las imágenes en general */
+.project-img img {
     transition: var(--transition);
     width: 100%;
 }
 
-.project-card:hover .project-img img{
+.project-card:hover .project-img img {
     transform: scale(1.05);
 }
 
@@ -394,7 +385,7 @@ section {
     flex-direction: column;
 }
 
-.project-info h3{
+.project-info h3 {
     margin-bottom: .8rem;
     font-size: 1.3rem;
 }
@@ -406,7 +397,7 @@ section {
     flex-grow: 1;
 }
 
-.project-tech{
+.project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
@@ -429,13 +420,37 @@ section {
     color: var(--primary-color);
 }
 
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
 footer {
     background-color: var(--darker-bg);
     border-top: 1px solid var(--border-color);
     padding: 2rem 5%;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -443,22 +458,26 @@ footer {
     margin: 0 auto;
 }
 
-@media (max-width: 430px){
-    header{
+/* =========================================
+   8. RESPONSIVE (MÓVILES)
+   ========================================= */
+@media (max-width: 430px) {
+    header {
         position: static;
     }
-    #navbar{
+    #navbar {
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
     }
-    .hero-content, .nav-links{
+    .hero-content, .nav-links {
         flex-direction: column;
     }
 }
 
-/* ===== SOLO CARRUSEL ENLA ===== */
-
+/* =========================================
+   9. ESTILOS ESPECÍFICOS: CARRUSEL ENLA
+   ========================================= */
 #proyectos-enla {
     margin-top: 100px;
 }
@@ -475,13 +494,11 @@ footer {
     overflow: hidden;
 }
 
-/* CONTENEDOR DEL CARRUSEL */
 #proyectos-enla .projects-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-/* TARJETA */
 #proyectos-enla .project-card {
     min-width: 800px;
     height: 100%;
@@ -493,21 +510,18 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* 🔥 IMAGEN TIPO PORTADA */
 #proyectos-enla .project-img {
-    height: 350px; /* puedes subir a 400 si quieres más impacto */
+    height: 350px;
     overflow: hidden;
 }
 
-/* 🔥 IMAGEN AJUSTADA */
 #proyectos-enla .project-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 👈 llena todo */
-    object-position: top; /* 👈 muestra parte superior (mejor para formularios) */
+    object-fit: cover;
+    object-position: top;
 }
 
-/* TEXTO */
 #proyectos-enla .project-info {
     padding: 1.5rem;
 }
@@ -522,33 +536,11 @@ footer {
     color: #aaa;
 }
 
-/* BOTONES */
-#proyectos-enla .boton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#proyectos-enla .anterior {
-    left: 10px;
-}
-
-#proyectos-enla .siguiente {
-    right: 10px;
-}
-
 .btn-web-pro {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #24292e; /* base tipo GitHub */
+    background-color: #24292e;
     color: white;
     padding: 8px 16px;
     border-radius: 6px;
@@ -572,22 +564,25 @@ footer {
     transform: scale(0.96);
 }
 
-/* ===== SOLO PARA EL CARRUSEL DE DASHBOARD ===== */
-
+/* =========================================
+   10. ESTILOS ESPECÍFICOS: DASHBOARD ANDINA
+   (Aquí arreglamos las imágenes de Power BI)
+   ========================================= */
 #proyectos-datos .project-img {
-    height: auto; /* Deja que la imagen defina su altura */
-    background-color: #0a0a0a; /* Fondo oscuro por si la imagen tiene bordes */
+    height: 420px; /* Altura fija para uniformidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
 }
 
 #proyectos-datos .project-img img {
     width: 100%;
-    height: auto;
-    object-fit: contain; /* 👈 Muestra la imagen completa, sin recortar */
-    max-height: 500px; /* Evita que se vuelva gigante en pantallas grandes */
+    height: 100%;
+    object-fit: contain; /* Muestra la captura completa sin recortes */
 }
 
-/* Ajuste para el carrusel (por si acaso) */
-#proyectos-datos .carrusel {
-    width: 800px;
-    height: auto;
+/* Desactivamos el zoom en este carrusel para que no se corten los ejes de Power BI */
+#proyectos-datos .project-card:hover .project-img img {
+    transform: scale(1.0);
 }
