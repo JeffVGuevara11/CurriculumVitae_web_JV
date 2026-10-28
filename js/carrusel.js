@@ -29,3 +29,23 @@ function moverCarruselIncidencias(direccion) {
 
     container.style.transform = `translateX(-${indexIncidencias * 800}px)`;
 }
+
+// CARRUSEL DE DASHBOARD DE DATOS
+let currentIndexDatos = 0;
+
+function moverCarruselDatos(direction) {
+    const container = document.getElementById('projects-container-datos');
+    const cards = container.querySelectorAll('.project-card');
+    const totalCards = cards.length;
+
+    currentIndexDatos += direction;
+
+    if (currentIndexDatos < 0) {
+        currentIndexDatos = totalCards - 1;
+    } else if (currentIndexDatos >= totalCards) {
+        currentIndexDatos = 0;
+    }
+
+    const offset = -currentIndexDatos * 100;
+    container.style.transform = `translateX(${offset}%)`;
+}
