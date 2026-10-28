@@ -571,3 +571,23 @@ footer {
 .btn-web-pro:active {
     transform: scale(0.96);
 }
+
+/* ===== SOLO PARA EL CARRUSEL DE DASHBOARD ===== */
+
+#proyectos-datos .project-img {
+    height: auto; /* Deja que la imagen defina su altura */
+    background-color: #0a0a0a; /* Fondo oscuro por si la imagen tiene bordes */
+}
+
+#proyectos-datos .project-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* 👈 Muestra la imagen completa, sin recortar */
+    max-height: 500px; /* Evita que se vuelva gigante en pantallas grandes */
+}
+
+/* Ajuste para el carrusel (por si acaso) */
+#proyectos-datos .carrusel {
+    width: 800px;
+    height: auto;
+}
