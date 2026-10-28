@@ -252,367 +252,88 @@ y enfoque en calidad de datos, eficiencia operativa y soporte a la toma de decis
     </div>
 </section>
 
-<!-- PROYECTO ANALISIS DE DATOS - DASHBOARD ANDINA -->
-<section id="proyectos-datos" class="projects">
-    <h2 class="section-title">Proyecto de Análisis de Datos - Dashboard Comercial</h2>
-
-    <div class="carrusel">
-        <div class="projects-container" id="projects-container-datos">
-
-            <!-- SLIDE 1: RESUMEN EJECUTIVO -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/Dashboard_Andina_Resumen_Ejecutivo.png" alt="Resumen Ejecutivo - Dashboard Andina">
-                </div>
-                <div class="project-info">
-                    <h3>Resumen Ejecutivo Comercial</h3>
-                    <p>
-                        Dashboard interactivo que centraliza los KPIs principales del negocio: Ventas Totales (S/ 8.10M), Margen Bruto (S/ 1.85M), 
-                        Margen Porcentual (22.8%), Ticket Promedio y Transacciones. Diseñado para la toma de decisiones gerenciales rápidas.
-                    </p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>DAX</span>
-                        <span>SQL Server</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 2: ANÁLISIS POR CATEGORÍA -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/Dashboard_Andina_Análisis_por_Categoría.png" alt="Análisis por Categoría - Dashboard Andina">
-                </div>
-                <div class="project-info">
-                    <h3>Análisis de Rentabilidad por Categoría</h3>
-                    <p>
-                        Análisis profundo del mix de productos. Gráfico combinado de ventas y margen por categoría, 
-                        Treemap de participación y tarjetas dinámicas que reaccionan a los filtros del usuario (Top Producto, Categoría más rentable).
-                    </p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Modelado DAX</span>
-                        <span>Treemap</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 3: ANÁLISIS TEMPORAL -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/Dashboard_Andina_Análisis_Temporal.png" alt="Análisis Temporal - Dashboard Andina">
-                </div>
-                <div class="project-info">
-                    <h3>Análisis de Tendencias Temporales</h3>
-                    <p>
-                        Visualización de la evolución de ventas mes a mes. Incluye gráfico de columnas para volumen, 
-                        y un gráfico de dispersión (Scatter Plot) para analizar la relación entre el volumen de ventas y el margen porcentual por mes.
-                    </p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Análisis Temporal</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="boton anterior" onclick="moverCarruselDatos(-1)">❮</button>
-        <button class="boton siguiente" onclick="moverCarruselDatos(1)">❯</button>
-    </div>
-</section>
-
-<!-- PROYECTO PERSONAL -->
+<!-- SECCIÓN DE PROYECTOS UNIFICADA -->
 <section id="proyectos" class="projects">
-    <h2 class="section-title">Proyecto Personal</h2>
+    <h2 class="section-title">Mis Proyectos Destacados</h2>
 
-    <div class="carrusel">
-        <div class="projects-container" id="projects-container">
+    <div class="projects-grid">
 
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/PAGINA PRINCIPAL.png" alt="home1">
-                </div>
-                <div class="project-info">
-                    <h3>Web E-Commerce "BOOKSITE"</h3>
-                    <p>
-                        Pagina Web para la venta de libros digitales, desarrollada en Python con Flask,
-                        cuenta con conexión a base de datos MySQL.
-                    </p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JeffVGuevara11/Web-E-Commerce-BOOKSITE-" target="_blank">
-                            <i class="fab fa-github"></i>Codigo
-                        </a>
-                    </div>
-                </div>
+        <!-- PROYECTO 1: DASHBOARD ANDINA -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./img/Dashboard_Andina_Resumen_Ejecutivo.png" alt="Dashboard Andina">
             </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO2.png" alt="home2">
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO3.png" alt="home3">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Botones de las categorías más destacadas, con los cuales se puede filtrar los libros.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO4.png" alt="home4">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Pestaña "Biblioteca", aqui se muestra todos los libros almacenados en la base de datos,
-                        se puede filtrar mediante el buscador ubicado en la cabecera, tambien cuenta con el boton
-                        "obtener libro" el cual para que se pueda adquirir dicho libro se debe iniciar sesion,
-                        por ende te redirecciona a la pestaña inicio de sesion o Login
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO5.png" alt="home5">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Pestaña "Login", contiene validaciones como que el email termine en "@gmail.com"
-                        y notificaciones de error
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO6.png" alt="home6">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Pestaña "Crear Usuario", contiene validaciones y notificaciones de error
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO7.png" alt="home7">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Una ves se incie sesion con una cuenta cliente, se habilitar el boton de compra Paypal,
-                        una ves efectuado el pago dicho libro adquirido se insertara en la lista de libros de la cuenta
-                        ubicado en la pestaña "Mis Libros" en donde se podra descargar el pdf del libro.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO8.png" alt="home8">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Pestaña "Mis libros", aqui se muestra los libros obtenidos por la cuenta cliente.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FOTO9.png" alt="home9">
-                </div>
-                <div class="project-info">
-                    <p>
-                        Mediante el incio de sesion en una cuenta Administrador, se habilita la ventana
-                        "administrar libros" en donde se puede insertar, editar o eliminar un libro.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="boton anterior" onclick="moverCarrusel(-1)">❮</button>
-        <button class="boton siguiente" onclick="moverCarrusel(1)">❯</button>
-    </div>
-</section>
-
-<!-- PROYECTOS ENLA -->
-<section id="proyectos-enla" class="projects">
-    <h2 class="section-title">Proyecto Web Informes Tecnicos - ENLA 2025</h2>
-
-    <div class="carrusel">
-        <div class="projects-container" id="projects-container-enla">
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/LOGIN-INFOTECNICO-2025.png" alt="Proyecto ENLA">
-                </div>
-                <div class="project-info">
-                    <h3>Login</h3>
-                    <p>Incio de sesion solo para algunos cargos correspondientes del proyecto ENLA</p>
-                </div>
+            <div class="project-info">
+                <h3>Análisis de Datos - Dashboard Comercial</h3>
+                <p>Dashboard interactivo con KPIs, evolución temporal y rentabilidad por categoría. Diseñado en Power BI y modelado desde SQL Server.</p>
                 <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>PHP</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>SQL Server</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://enla.online/prueba/vista/login.php" target="_blank" class="btn-web-pro">
-                        <i class="fas fa-globe"></i>Pagina web ENLA - 2025
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/FORMULARIO-INFOTECNICO-2025.png" alt="Proyecto ENLA">
-                </div>
-                <div class="project-info">
-                    <h3>Informe tenico del Coordinador de Sede</h3>
-                    <p>Dicho informe contiene condicionales de activacion y desactivacion de preguntas para su corrceto llenado y resduccion de errores al llenado, 
-                        tambien cuenta con la subida archivos tipo pdf y condicionales de tipos de caracteres a ingresar determinado por la pregunta</p>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/ADMIN-INFOTECNICO-2025.png" alt="Proyecto ENLA">
-                </div>
-                <div class="project-info">
-                    <h3>Menu de Administracion</h3>
-                    <p>En esta pagina se puede ingresar a diferentes reportes del llenado de los informes tecnicos, solo puede ingresar el usuario administrador</p>
-                </div>
-            </div>
-
-                <div class="project-card">
-        <div class="project-img">
-            <img src="./img/REPORTE-INFOTECNICO-2025.png">
-        </div>
-        <div class="project-info">
-            <h3>Pagina reporte del Coordinador de Sede</h3>
-            <p>En esta pagina se visualiza el reporte de un cargo, donde se aplica conteo de DNI duplicados, conteo de usuario y filtros por sede regional e jurisdiccional, botones de navegacion 
-                y boton para la descarga del reporte en excel</p>
-        </div>
-    </div>
-             <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/EXCEL-INFOTECNICO-2025.png" alt="Proyecto ENLA">
-                </div>
-                <div class="project-info">
-                    <h3>Reporte en Excel del Informe tecnico del Coordinador de Sede</h3>
-                    <p>Este es el archivo excel que se descarga de la web del reporte del informe tecnico del Coordinador de Sede, en este reporte se hizo la conversion del codigo de pregunta a la redaccion de la pregunta 
-                        tal cual esta en la web del informe tecnico, esta conversion se realizo mediante codigo y se separo por secciones</p>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="boton anterior" onclick="moverCarruselENLA(-1)">❮</button>
-        <button class="boton siguiente" onclick="moverCarruselENLA(1)">❯</button>
-    </div>
-</section>
-
-<!-- PROYECTOS GESTION DE INCIDENCIAS -->
-<section id="proyectos-incidencias" class="projects">
-    <h2 class="section-title">Proyecto Gestión de Incidencias</h2>
-
-    <div class="carrusel">
-        <div class="projects-container" id="projects-container-incidencias">
-
-            <!-- SLIDE 1 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/LOGIN-INFOTECNICO-2025.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Login</h3>
-                    <p>Incio de sesion solo para algunos cargos correspondientes del proyecto ENLA</p>
-                </div>
-            </div>
-
-             <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/MENU-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Menu Principal</h3>
-                    <p>En este menu se puede acceder a diferentes vistas mediante botones, los cargos que tienen acceso al menu para la gestion de incidencias es el coordinador de Monitoreo informatico 
-                        y los monitores informaticos, cuando se ingresa con el usuario de un monitor informatico se bloquea el boton reporte de incidencias y el boton administrar tipo de incidencias, 
-                        ya que a estas paginas solo puede ingresar el coordinador de monitoreo informatico</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/REGISTRO - GESTION DE INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Registro de incidencias informaticas</h3>
-                    <p>En esta pagina se visualiza una tabla con el total de ticket de incidencias realizadas por los cargos de campo por cada sede regional, 
-                        tambien la cantidad de tickets de incidencias abiertas, ademas de que el monitor informatico puede genera un ticket de sus sedes regionales a cargo, 
-                        esta pagina tambien notifica a la cuenta del monitor informatico a cargo de la sede regional a la que se le registro nuevo ticket mediante una alerta emergente</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/LISTADO-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Listado de incidencias informaticas</h3>
-                    <p>En esta pagina se visualiza una tabla con el total de ticket de incidencias realizadas por los cargos de campo por cada sede regional, 
-                        tambien la cantidad de tickets de incidencias abiertas, ademas de que el monitor informatico puede genera un ticket de sus sedes regionales a cargo, 
-                        esta pagina tambien notifica a la cuenta del monitor informatico a cargo de la sede regional a la que se le registro nuevo ticket mediante una alerta emergente</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/TIPOS-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Gestion de tipos de incidencias informaticas</h3>
-                    <p>En esta pagina el coordinador del monitoreo informatico gestiona los tipos de incidencias mas comunes reportados por campo</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/TICKET-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Menu ticket de incidencia</h3>
-                    <p>En esta pagina el persona de campo puede acceder a las paginas de historial de ticket realizados o Generar un ticket</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="./img/HISTORIALTICKET-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
-                </div>
-                <div class="project-info">
-                    <h3>Generacion de tickets de mesa de ayuda</h3>
-                    <p>En esta pagina el persona de campo genera ticket de incidencias, la web tiene autocompletado en la informacion de la fecha, sede regional, sede jurisdiccional, responsable y 
-                        monitor informatico asignado</p>
+                    <a href="#"><i class="fas fa-chart-line"></i> Ver Reporte</a>
                 </div>
             </div>
         </div>
 
-        <button class="boton anterior" onclick="moverCarruselIncidencias(-1)">❮</button>
-        <button class="boton siguiente" onclick="moverCarruselIncidencias(1)">❯</button>
+        <!-- PROYECTO 2: ENLA -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./img/LOGIN-INFOTECNICO-2025.png" alt="Proyecto ENLA">
+            </div>
+            <div class="project-info">
+                <h3>Web Informes Técnicos - ENLA 2025</h3>
+                <p>Sistema de captura y validación de datos para el INEI. Incluye autenticación por roles, condicionales dinámicos y exportación a Excel.</p>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://enla.online/prueba/vista/login.php" target="_blank"><i class="fas fa-globe"></i> Ver Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3: INCIDENCIAS -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./img/MENU-GESTION INCIDENCIAS.png" alt="Sistema Incidencias">
+            </div>
+            <div class="project-info">
+                <h3>Gestión de Incidencias - Help Desk</h3>
+                <p>Sistema de mesa de ayuda para el área de monitoreo. Permite registrar tickets, asignar responsables y notificar alertas en tiempo real.</p>
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>JS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#"><i class="fab fa-github"></i> Código</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 4: E-COMMERCE -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./img/PAGINA PRINCIPAL.png" alt="Web E-Commerce">
+            </div>
+            <div class="project-info">
+                <h3>Web E-Commerce "BOOKSITE"</h3>
+                <p>Plataforma de venta de libros digitales con pasarela de pagos PayPal, gestión de usuarios y panel administrador para el catálogo.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>MySQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/JeffVGuevara11/Web-E-Commerce-BOOKSITE-" target="_blank"><i class="fab fa-github"></i> Código</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -623,8 +344,6 @@ y enfoque en calidad de datos, eficiencia operativa y soporte a la toma de decis
         <p>&copy; 2025 Jefferson Velarde</p>
     </div>
 </footer>
-
-<script src="./js/carrusel.js"></script>
 
 </body>
 </html>
