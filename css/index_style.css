@@ -126,59 +126,89 @@ section { padding: 6rem 5%; max-width: 1400px; margin: 0 auto; }
 .skills li { font-size: .8rem; padding: .3rem .8rem; background-color: var(--darker-bg); border-radius: 20px; }
 
 /* =========================================
-   NUEVO DISEÑO DE PROYECTOS (GRID)
+   NUEVO CARRUSEL UNIFICADO (MODERNO)
    ========================================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+.carrusel-wrapper {
+    max-width: 900px;
     margin: 0 auto;
-}
-
-.projects-grid .project-card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
+    position: relative;
     overflow: hidden;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color);
 }
 
-.projects-grid .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.15);
-    border-color: var(--primary-color);
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.projects-grid .project-img {
-    height: 220px;
+.project-card {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+    height: 450px; /* Altura fija para uniformidad */
     background-color: var(--darker-bg);
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.projects-grid .project-img img {
+.project-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-/* Para el Dashboard, mostramos la imagen completa con un fondo oscuro */
-.projects-grid .project-card:first-child .project-img img {
-    object-fit: contain;
+    object-fit: contain; /* Muestra las capturas completas sin recortar */
     padding: 10px;
 }
 
-.projects-grid .project-info { padding: 1.5rem; }
-.projects-grid .project-info h3 { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem; }
-.projects-grid .project-info p { color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5; }
+.project-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+}
 
-.project-tech { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
-.project-tech span { font-size: .8rem; padding: .2rem .6rem; background-color: var(--darker-bg); border-radius: 20px; }
-.project-links { display: flex; gap: 1rem; }
+.project-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-info p {
+    color: var(--gray-text);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-tech { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+.project-tech span { font-size: .85rem; padding: .3rem .8rem; background-color: var(--darker-bg); border-radius: 20px; }
+.project-links { display: flex; gap: 1rem; font-weight: 600; }
 .project-links a:hover { color: var(--primary-color); }
+
+/* Botones del carrusel */
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border-color);
+    color: white;
+    font-size: 24px;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+    border-radius: 5px;
+}
+.boton:hover { background: var(--primary-color); }
+.anterior { left: 15px; }
+.siguiente { right: 15px; }
 
 /* =========================================
    FOOTER Y RESPONSIVE
@@ -192,4 +222,6 @@ footer { background-color: var(--darker-bg); border-top: 1px solid var(--border-
     .hero-content, .nav-links { flex-direction: column; text-align: center; }
     .hero-image { justify-content: center; margin-top: 2rem; }
     .hero-image img { width: 250px; height: 250px; }
+    .project-img { height: 250px; }
+    .carrusel-wrapper { max-width: 100%; border-radius: 0; }
 }
