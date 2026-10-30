@@ -187,6 +187,7 @@ function abrirModalCertificado(id) {
     const data = certificadosData[id];
     if (!data) return;
 
+    // 1. Actualizar textos
     document.getElementById('titulo-certificado').innerText = data.titulo;
     document.getElementById('institucion-certificado').innerText = data.institucion;
     
@@ -198,23 +199,29 @@ function abrirModalCertificado(id) {
         lista.appendChild(li);
     });
 
-    // Lógica del botón de PDF o "En curso"
+    // 2. Inyectar el PDF o el mensaje de "En curso"
     const contenedorPdf = document.getElementById('contenedor-pdf');
+    
     if (data.imagen) {
+        // Si hay PDF, lo mostramos en un iframe bloqueando la barra de herramientas
         contenedorPdf.innerHTML = `
-            <a href="${data.imagen}" target="_blank" class="btn-ver-pdf">
-                <i class="fas fa-file-pdf"></i> Abrir Certificado PDF
-            </a>
+            <iframe 
+                src="${data.imagen}#toolbar=0&navpanes=0&scrollbar=0" 
+                width="100%" 
+                height="100%" 
+                style="border: none; border-radius: 10px;">
+            </iframe>
         `;
     } else {
+        // Si está en curso, mostramos un mensaje
         contenedorPdf.innerHTML = `
-            <div class="badge-en-curso-modal">
-                <i class="fas fa-clock"></i> Certificado en curso
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #ffc107; text-align: center; background-color: #121212; border-radius: 10px;">
+                <i class="fas fa-hourglass-half" style="font-size: 5rem; margin-bottom: 15px;"></i>
+                <h3>Certificado en curso</h3>
+                <p style="font-size: 1rem; color: #aaa; margin-top: 10px; padding: 0 20px;">Aún no disponible para visualización.</p>
             </div>
         `;
     }
 
     document.getElementById('modalCertificado').style.display = 'flex';
 }
-
-
