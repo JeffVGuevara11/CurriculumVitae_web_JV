@@ -271,75 +271,99 @@ y enfoque en calidad de datos, eficiencia operativa y soporte a la toma de decis
     </div>
 </section>
 
-    <!-- SECCIÓN DE CERTIFICADOS -->
-<section id="certificados" class="certificados">
+<!-- SECCIÓN DE CERTIFICADOS (DISEÑO GRID) -->
+<section id="certificados" class="projects">
     <h2 class="section-title">Mis Certificaciones</h2>
 
-    <div class="certificados-grid">
-        
+    <div class="projects-grid">
+
         <!-- 1. Power BI -->
-        <div class="certificado-card">
-            <div class="certificado-icon"><i class="fas fa-chart-pie"></i></div>
-            <div class="certificado-info">
+        <div class="project-card" onclick="abrirModalCertificado('powerbi')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-chart-pie" style="font-size: 5rem; color: #f2c811;"></i>
+            </div>
+            <div class="project-info">
                 <h3>Análisis de Datos con Power BI</h3>
-                <p>Certificación en modelado y visualización de datos.</p>
-                <span class="certificado-fecha">2026</span>
-                <!-- Enlace al PDF -->
-                <a href="./img/Certificado_Anlisis_de_Datos_con_Power_Bi.pdf" target="_blank" class="btn-certificado">
-                    <i class="fas fa-file-pdf"></i> Ver Certificado
-                </a>
+                <p>Universidad Nacional de Ingeniería (UNI)</p>
+                <div class="project-tech">
+                    <span>2026</span>
+                    <span>Data Analytics</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
 
         <!-- 2. Power BI Básico -->
-        <div class="certificado-card">
-            <div class="certificado-icon"><i class="fas fa-chart-bar"></i></div>
-            <div class="certificado-info">
+        <div class="project-card" onclick="abrirModalCertificado('powerbi_basico')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-chart-bar" style="font-size: 5rem; color: #f2c811;"></i>
+            </div>
+            <div class="project-info">
                 <h3>Power BI Nivel Básico</h3>
-                <p>Fundamentos de creación de reportes y dashboards.</p>
-                <span class="certificado-fecha">2026</span>
-                <a href="./img/Certificado_Power_Bi_Nivel_Basico.pdf" target="_blank" class="btn-certificado">
-                    <i class="fas fa-file-pdf"></i> Ver Certificado
-                </a>
+                <p>Universidad Nacional de Ingeniería (UNI)</p>
+                <div class="project-tech">
+                    <span>2026</span>
+                    <span>BI</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi_basico')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
 
         <!-- 3. Excel -->
-        <div class="certificado-card">
-            <div class="certificado-icon"><i class="fas fa-file-excel"></i></div>
-            <div class="certificado-info">
+        <div class="project-card" onclick="abrirModalCertificado('excel')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-file-excel" style="font-size: 5rem; color: #1D6F42;"></i>
+            </div>
+            <div class="project-info">
                 <h3>Excel Nivel Intermedio</h3>
-                <p>Funciones avanzadas, tablas dinámicas y análisis de datos.</p>
-                <span class="certificado-fecha">2026</span>
-                <a href="./img/Certificado_Excel_Nivel_Intermedio.pdf" target="_blank" class="btn-certificado">
-                    <i class="fas fa-file-pdf"></i> Ver Certificado
-                </a>
+                <p>WE Educación Ejecutiva</p>
+                <div class="project-tech">
+                    <span>2026</span>
+                    <span>Ofimática</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('excel')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
 
         <!-- 4. Python -->
-        <div class="certificado-card">
-            <div class="certificado-icon"><i class="fab fa-python"></i></div>
-            <div class="certificado-info">
+        <div class="project-card" onclick="abrirModalCertificado('python')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
+                <i class="fab fa-python" style="font-size: 5rem; color: #3776AB;"></i>
+            </div>
+            <div class="project-info">
                 <h3>Python Nivel Intermedio</h3>
-                <p>Programación orientada a objetos y manejo de estructuras de datos.</p>
-                <span class="certificado-fecha">2020</span>
-                <a href="./img/Certificado_Python_Nivel_Intermedio.pdf" target="_blank" class="btn-certificado">
-                    <i class="fas fa-file-pdf"></i> Ver Certificado
-                </a>
+                <p>Cisco Networking Academy</p>
+                <div class="project-tech">
+                    <span>2020</span>
+                    <span>Programación</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('python')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
 
         <!-- 5. C++ -->
-        <div class="certificado-card">
-            <div class="certificado-icon"><i class="fas fa-code"></i></div>
-            <div class="certificado-info">
+        <div class="project-card" onclick="abrirModalCertificado('cpp')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-code" style="font-size: 5rem; color: #00599C;"></i>
+            </div>
+            <div class="project-info">
                 <h3>Lenguaje C Nivel Avanzado</h3>
-                <p>Estructuras de datos, punteros y gestión de memoria.</p>
-                <span class="certificado-fecha">2020</span>
-                <a href="./img/Certificado_Lenguaje_C_Nivel_Avanzado.pdf" target="_blank" class="btn-certificado">
-                    <i class="fas fa-file-pdf"></i> Ver Certificado
-                </a>
+                <p>Cisco Networking Academy</p>
+                <div class="project-tech">
+                    <span>2020</span>
+                    <span>Estructuras</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('cpp')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
 
