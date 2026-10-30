@@ -553,3 +553,19 @@ footer {
     }
     .modal-cert-texto h2 { font-size: 1.4rem; }
 }
+
+/* Badge para el modal cuando está en curso */
+.badge-en-curso-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
