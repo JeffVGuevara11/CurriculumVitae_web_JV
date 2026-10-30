@@ -107,3 +107,114 @@ window.onclick = function(event) {
         cerrarModal();
     }
 }
+
+const certificadosData = {
+    powerbi_intermedio: {
+        titulo: "Power BI Intermedio",
+        institucion: "Universidad Peruana de Ciencias Aplicadas (UPC) - En curso",
+        imagen: null, // No hay PDF aún
+        temas: [
+            "Modelado de datos avanzado (Esquema de copo de nieve).",
+            "Funciones DAX avanzadas (CALCULATE, FILTER, ALL, Time Intelligence).",
+            "Optimización de rendimiento en Power BI.",
+            "Creación de reportes con parámetros dinámicos.",
+            "Implementación de Row-Level Security (RLS)."
+        ]
+    },
+    powerbi_basico: {
+        titulo: "Power BI Nivel Básico",
+        institucion: "Universidad Peruana de Ciencias Aplicadas (UPC) - 2026",
+        imagen: "./img/Certificado_Power_Bi_Nivel_Basico.pdf",
+        temas: [
+            "Fundamentos de Power BI Desktop y Power Query.",
+            "Conexión a fuentes de datos (Excel, CSV, Web).",
+            "Manipulación y limpieza de datos.",
+            "Relaciones entre tablas y cardinalidad (Uno a Muchos).",
+            "Creación y personalización de objetos visuales básicos."
+        ]
+    },
+    excel_intermedio: {
+        titulo: "Análisis de Datos con Excel Intermedio",
+        institucion: "Universidad Peruana de Ciencias Aplicadas (UPC) - En curso",
+        imagen: null, // No hay PDF aún
+        temas: [
+            "Tablas dinámicas avanzadas y segmentación de datos.",
+            "Funciones de búsqueda y referencia complejas.",
+            "Análisis de hipótesis (Buscar objetivo, Tabla de datos).",
+            "Uso de Power Query para automatizar la limpieza de datos.",
+            "Introducción a las macros (VBA) para tareas repetitivas."
+        ]
+    },
+    excel: {
+        titulo: "Excel Nivel Intermedio",
+        institucion: "WE Educación Ejecutiva - 2026",
+        imagen: "./img/Certificado_Excel_Nivel_Intermedio.pdf",
+        temas: [
+            "Funciones lógicas y de búsqueda avanzadas (BUSCARV, ÍNDICE, COINCIDIR).",
+            "Manejo de tablas dinámicas para resumen de datos.",
+            "Formato condicional y validación de datos.",
+            "Funciones estadísticas y financieras.",
+            "Auditoría de fórmulas y gestión de rangos."
+        ]
+    },
+    python: {
+        titulo: "Python Nivel Intermedio",
+        institucion: "Cisco Networking Academy - 2020",
+        imagen: "./img/Certificado_Python_Nivel_Intermedio.pdf",
+        temas: [
+            "Programación Orientada a Objetos (POO).",
+            "Estructuras de datos: listas, tuplas, diccionarios.",
+            "Manejo de excepciones y depuración.",
+            "Módulos y paquetes de la librería estándar.",
+            "Desarrollo de aplicaciones modulares."
+        ]
+    },
+    cpp: {
+        titulo: "Lenguaje C Nivel Avanzado",
+        institucion: "Cisco Networking Academy - 2020",
+        imagen: "./img/Certificado_Lenguaje_C_Nivel_Avanzado.pdf",
+        temas: [
+            "Gestión de memoria y punteros.",
+            "Estructuras de datos complejas.",
+            "Manejo de archivos y flujos (I/O).",
+            "Procesos y hilos (Threads).",
+            "Programación de sockets y redes básicas."
+        ]
+    }
+};
+
+function abrirModalCertificado(id) {
+    const data = certificadosData[id];
+    if (!data) return;
+
+    document.getElementById('titulo-certificado').innerText = data.titulo;
+    document.getElementById('institucion-certificado').innerText = data.institucion;
+    
+    const lista = document.getElementById('lista-temas');
+    lista.innerHTML = '';
+    data.temas.forEach(tema => {
+        const li = document.createElement('li');
+        li.innerText = tema;
+        lista.appendChild(li);
+    });
+
+    // Lógica del botón de PDF o "En curso"
+    const contenedorPdf = document.getElementById('contenedor-pdf');
+    if (data.imagen) {
+        contenedorPdf.innerHTML = `
+            <a href="${data.imagen}" target="_blank" class="btn-ver-pdf">
+                <i class="fas fa-file-pdf"></i> Abrir Certificado PDF
+            </a>
+        `;
+    } else {
+        contenedorPdf.innerHTML = `
+            <div class="badge-en-curso-modal">
+                <i class="fas fa-clock"></i> Certificado en curso
+            </div>
+        `;
+    }
+
+    document.getElementById('modalCertificado').style.display = 'flex';
+}
+
+
