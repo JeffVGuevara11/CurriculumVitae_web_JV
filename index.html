@@ -271,121 +271,135 @@ y enfoque en calidad de datos, eficiencia operativa y soporte a la toma de decis
     </div>
 </section>
 
-<!-- SECCIÓN DE CERTIFICADOS (DISEÑO GRID) -->
+<!-- SECCIÓN DE CERTIFICADOS (DISEÑO GRID CON VISTA PREVIA DE PDF) -->
 <section id="certificados" class="projects">
     <h2 class="section-title">Mis Certificaciones</h2>
 
-<div class="projects-grid">
+    <div class="projects-grid">
 
-    <!-- 1. Power BI Intermedio (EN CURSO) -->
-    <div class="project-card" onclick="abrirModalCertificado('powerbi_intermedio')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-chart-pie" style="font-size: 5rem; color: #f2c811;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Power BI Intermedio</h3>
-            <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
-            <div class="project-tech">
-                <span>En curso</span>
-                <span>BI</span>
+        <!-- 1. Power BI Intermedio (EN CURSO) -->
+        <div class="project-card" onclick="abrirModalCertificado('powerbi_intermedio')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <i class="fas fa-hourglass-half" style="font-size: 4rem; color: #ffc107; margin-bottom: 10px;"></i>
+                <span style="color: #ffc107; font-weight: bold; font-size: 1.2rem;">En Curso</span>
             </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi_intermedio')"><i class="fas fa-expand"></i> Ver Detalles</a>
+            <div class="project-info">
+                <h3>Power BI Intermedio</h3>
+                <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
+                <div class="project-tech">
+                    <span>En curso</span>
+                    <span>BI</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi_intermedio')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
             </div>
         </div>
+
+        <!-- 2. Power BI Básico (CULMINADO - CON VISTA PREVIA PDF) -->
+        <div class="project-card" onclick="abrirModalCertificado('powerbi_basico')">
+            <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
+                <object data="./img/Certificado_Power_Bi_Nivel_Basico.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
+                </object>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            </div>
+            <div class="project-info">
+                <h3>Power BI Nivel Básico</h3>
+                <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
+                <div class="project-tech">
+                    <span>2026</span>
+                    <span>BI</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi_basico')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Análisis de Datos con Excel (EN CURSO) -->
+        <div class="project-card" onclick="abrirModalCertificado('excel_intermedio')">
+            <div class="project-img" style="background-color: #1e1e1e; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <i class="fas fa-hourglass-half" style="font-size: 4rem; color: #ffc107; margin-bottom: 10px;"></i>
+                <span style="color: #ffc107; font-weight: bold; font-size: 1.2rem;">En Curso</span>
+            </div>
+            <div class="project-info">
+                <h3>Análisis de Datos con Excel</h3>
+                <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
+                <div class="project-tech">
+                    <span>En curso</span>
+                    <span>Data Analytics</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('excel_intermedio')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Excel Intermedio (CULMINADO - CON VISTA PREVIA PDF) -->
+        <div class="project-card" onclick="abrirModalCertificado('excel')">
+            <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
+                <object data="./img/Certificado_Excel_Nivel_Intermedio.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
+                </object>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            </div>
+            <div class="project-info">
+                <h3>Excel Nivel Intermedio</h3>
+                <p>WE Educación Ejecutiva</p>
+                <div class="project-tech">
+                    <span>2026</span>
+                    <span>Ofimática</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('excel')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Python (CULMINADO - CON VISTA PREVIA PDF) -->
+        <div class="project-card" onclick="abrirModalCertificado('python')">
+            <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
+                <object data="./img/Certificado_Python_Nivel_Intermedio.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
+                </object>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            </div>
+            <div class="project-info">
+                <h3>Python Nivel Intermedio</h3>
+                <p>Cisco Networking Academy</p>
+                <div class="project-tech">
+                    <span>2020</span>
+                    <span>Programación</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('python')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. C++ (CULMINADO - CON VISTA PREVIA PDF) -->
+        <div class="project-card" onclick="abrirModalCertificado('cpp')">
+            <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
+                <object data="./img/Certificado_Lenguaje_C_Nivel_Avanzado.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
+                </object>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            </div>
+            <div class="project-info">
+                <h3>Lenguaje C Nivel Avanzado</h3>
+                <p>Cisco Networking Academy</p>
+                <div class="project-tech">
+                    <span>2020</span>
+                    <span>Estructuras</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('cpp')"><i class="fas fa-expand"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <!-- 2. Power BI Básico (CULMINADO) -->
-    <div class="project-card" onclick="abrirModalCertificado('powerbi_basico')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-chart-bar" style="font-size: 5rem; color: #f2c811;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Power BI Nivel Básico</h3>
-            <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
-            <div class="project-tech">
-                <span>2026</span>
-                <span>BI</span>
-            </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('powerbi_basico')"><i class="fas fa-expand"></i> Ver Detalles</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 3. Análisis de Datos con Excel (EN CURSO) -->
-    <div class="project-card" onclick="abrirModalCertificado('excel_intermedio')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-file-excel" style="font-size: 5rem; color: #1D6F42;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Análisis de Datos con Excel Intermedio</h3>
-            <p>Universidad Peruana de Ciencias Aplicadas (UPC)</p>
-            <div class="project-tech">
-                <span>En curso</span>
-                <span>Data Analytics</span>
-            </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('excel_intermedio')"><i class="fas fa-expand"></i> Ver Detalles</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 4. Excel Intermedio (CULMINADO - El de WE Educación) -->
-    <div class="project-card" onclick="abrirModalCertificado('excel')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-table" style="font-size: 5rem; color: #1D6F42;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Excel Nivel Intermedio</h3>
-            <p>WE Educación Ejecutiva</p>
-            <div class="project-tech">
-                <span>2026</span>
-                <span>Ofimática</span>
-            </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('excel')"><i class="fas fa-expand"></i> Ver Detalles</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 5. Python (CULMINADO) -->
-    <div class="project-card" onclick="abrirModalCertificado('python')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fab fa-python" style="font-size: 5rem; color: #3776AB;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Python Nivel Intermedio</h3>
-            <p>Cisco Networking Academy</p>
-            <div class="project-tech">
-                <span>2020</span>
-                <span>Programación</span>
-            </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('python')"><i class="fas fa-expand"></i> Ver Detalles</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 6. C++ (CULMINADO) -->
-    <div class="project-card" onclick="abrirModalCertificado('cpp')">
-        <div class="project-img" style="background-color: #1e1e1e; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-code" style="font-size: 5rem; color: #00599C;"></i>
-        </div>
-        <div class="project-info">
-            <h3>Lenguaje C Nivel Avanzado</h3>
-            <p>Cisco Networking Academy</p>
-            <div class="project-tech">
-                <span>2020</span>
-                <span>Estructuras</span>
-            </div>
-            <div class="project-links">
-                <a href="#" onclick="event.stopPropagation(); abrirModalCertificado('cpp')"><i class="fas fa-expand"></i> Ver Detalles</a>
-            </div>
-        </div>
-    </div>
-
-</div>
 </section>
 
 </main>
