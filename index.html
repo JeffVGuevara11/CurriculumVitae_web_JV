@@ -277,26 +277,27 @@ y enfoque en calidad de datos, eficiencia operativa y soporte a la toma de decis
 
     <div class="projects-grid">
 
-        <!-- 1. SQL nivel intermedio (TERMINADO) -->
-        <div class="project-card" onclick="window.open('./img/Certificado_SQL_Intermedio_ENEI.pdf', '_blank')">
-            <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
-                <object data="./img/Certificado_SQL_Intermedio_ENEI=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
-                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
-                </object>
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-            </div>
-            <div class="project-info">
-                <h3>Uso y Explotación de Bases de Datos con SQL Server (Nivel Intermedio)</h3>
-                <p>Instituto Nacional de Estadística e Informática (INEI)</p>
-                <div class="project-tech">
-                    <span>2026</span>
-                    <span>Data Analytics</span>
-                </div>
-                <div class="project-links">
-                    <a href="./img/Certificado_SQL_Intermedio_ENEI.pdf" target="_blank" onclick="event.stopPropagation();"><i class="fas fa-expand"></i> Ver Certificado</a>
-                </div>
-            </div>
+ <!-- 1. SQL nivel intermedio (TERMINADO) -->
+<div class="project-card" onclick="window.open('./img/Certificado_SQL_Intermedio_ENEI.pdf', '_blank')">
+    <div class="project-img" style="background-color: #1e1e1e; overflow: hidden; position: relative;">
+        <!-- AQUÍ ESTABA EL ERROR: Faltaba el .pdf#toolbar=... -->
+        <object data="./img/Certificado_SQL_Intermedio_ENEI.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width: 100%; height: 100%; pointer-events: none;">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #fff;">Cargando PDF...</div>
+        </object>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    </div>
+    <div class="project-info">
+        <h3>Uso y Explotación de Bases de Datos con SQL Server (Nivel Intermedio)</h3>
+        <p>Instituto Nacional de Estadística e Informática (INEI)</p>
+        <div class="project-tech">
+            <span>2026</span>
+            <span>Data Analytics</span>
         </div>
+        <div class="project-links">
+            <a href="./img/Certificado_SQL_Intermedio_ENEI.pdf" target="_blank" onclick="event.stopPropagation();"><i class="fas fa-expand"></i> Ver Certificado</a>
+        </div>
+    </div>
+</div>
 
         
         <!-- 1. Power BI Intermedio (EN CURSO) -->
